@@ -10,3 +10,8 @@ struct file *rust_helper_get_file(struct file *f)
 {
 	return get_file(f);
 }
+
+const struct path *rust_helper_file_user_path(const struct file *f)
+{
+	return file_user_path(f);
+}
