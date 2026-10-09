@@ -5,6 +5,7 @@ TARGETS += amd-pstate
 TARGETS += arm64
 TARGETS += bpf
 TARGETS += breakpoints
+TARGETS += bun_accel
 TARGETS += cachestat
 TARGETS += capabilities
 TARGETS += cgroup
