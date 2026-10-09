@@ -5357,6 +5357,12 @@ T:	git git://linuxtv.org/media.git
 F:	Documentation/driver-api/media/drivers/bttv*
 F:	drivers/media/pci/bt8xx/bttv*
 
+BUN_ACCEL BATCHED FILE COPY DRIVER
+M:	aphrody-dev <yohanpierre15@gmail.com>
+S:	Maintained
+F:	drivers/misc/bun_accel.rs
+F:	include/uapi/linux/bun_accel.h
+
 BUS FREQUENCY DRIVER FOR SAMSUNG EXYNOS
 M:	Chanwoo Choi <cw00.choi@samsung.com>
 L:	linux-pm@vger.kernel.org

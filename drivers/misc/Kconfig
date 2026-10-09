@@ -644,6 +644,21 @@ config MCHP_LAN966X_PCI
 	    - lan966x-miim (MDIO_MSCC_MIIM)
 	    - lan966x-switch (LAN966X_SWITCH)
 
+config BUN_ACCEL
+	tristate "Batched file copies for package managers"
+	depends on RUST
+	help
+	  Provides /dev/bun_accel. Its BUN_ACCEL_IOC_COPY_BATCH ioctl opens,
+	  creates and copies up to 1024 files per call with the caller's
+	  credentials. The Bun package manager uses it to populate
+	  node_modules with one system call per batch instead of five per
+	  file.
+
+	  To compile this driver as a module, choose M here: the module will
+	  be called bun_accel.
+
+	  If unsure, say N.
+
 source "drivers/misc/c2port/Kconfig"
 source "drivers/misc/eeprom/Kconfig"
 source "drivers/misc/cb710/Kconfig"
