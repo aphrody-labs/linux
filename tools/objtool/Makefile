@@ -114,7 +114,7 @@ endif
 
 export BUILD_DISAS
 
-AWK = awk
+AWK ?= awk
 MKDIR = mkdir
 
 export srctree OUTPUT CFLAGS SRCARCH AWK

@@ -5644,6 +5644,8 @@ M:	aphrody-dev <yohanpierre15@gmail.com>
 S:	Maintained
 F:	drivers/misc/bun_accel.rs
 F:	include/uapi/linux/bun_accel.h
+F:	kernel/configs/aphrody*.config
+F:	scripts/aphrody-config.sh
 F:	tools/testing/selftests/bun_accel/
 
 BUS FREQUENCY DRIVER FOR SAMSUNG EXYNOS

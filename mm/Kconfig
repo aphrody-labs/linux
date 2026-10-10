@@ -1261,6 +1261,18 @@ config HMM_MIRROR
 	bool
 	depends on MMU
 
+config APHRODY_NVIDIA_HMM
+	bool "HMM helpers for external NVIDIA modules"
+	depends on MMU && ZONE_DEVICE && DEVICE_PRIVATE
+	select HMM_MIRROR
+	select MMU_NOTIFIER
+	help
+	  Build the heterogeneous memory management helpers used by external
+	  NVIDIA open kernel modules without enabling a competing GPU driver.
+	  This option does not include or load the NVIDIA modules themselves.
+
+	  If unsure, say N.
+
 config GET_FREE_REGION
 	bool
 

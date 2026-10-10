@@ -523,9 +523,11 @@ static int __init unknown_bootoption(char *param, char *val,
 	repair_env_string(param, val);
 
 	/* Handle bootloader identifier */
-	for (int i = 0; bootloader[i]; i++) {
-		if (strstarts(param, bootloader[i]))
-			return 0;
+	if (!strstarts(param, "kexec_load_disabled=")) {
+		for (int i = 0; bootloader[i]; i++) {
+			if (strstarts(param, bootloader[i]))
+				return 0;
+		}
 	}
 
 	/* Handle obsolete-style parameters */

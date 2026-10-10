@@ -2944,6 +2944,11 @@ Kernel parameters
 			Format: <unsigned integer>
 			Default: 75
 
+	kexec_load_disabled= [KNL]
+			Disable loading new kexec images when nonzero (default: 1).
+			Set to 0 to permit loading images at boot. The sysctl
+			kernel.kexec_load_disabled can subsequently disable it.
+
 	kgdbdbgp=	[KGDB,HW,EARLY] kgdb over EHCI usb debug port.
 			Format: <Controller#>[,poll interval]
 			The controller # is the number of the ehci usb debug
